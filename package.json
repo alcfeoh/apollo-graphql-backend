@@ -1,0 +1,29 @@
+{
+  "name": "apollo-graphql-backend",
+  "version": "1.0.0",
+  "description": "A basic GraphQL DB used for front-end training classes",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alcfeoh/apollo-graphql-backend.git"
+  },
+  "keywords": [
+    "graphql",
+    "apollo"
+  ],
+  "author": "Alain Chautard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alcfeoh/apollo-graphql-backend/issues"
+  },
+  "homepage": "https://github.com/alcfeoh/apollo-graphql-backend#readme",
+  "dependencies": {
+    "@apollo/server": "^4.10.4",
+    "graphql": "^16.8.1"
+  }
+}
