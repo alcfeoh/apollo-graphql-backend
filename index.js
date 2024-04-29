@@ -37,8 +37,10 @@ const typeDefs = `#graphql
   }
   
   type Mutation {
-    addToCart(plateId: String): [LicensePlate]
+    addToCart(plateId: String): [LicensePlate],
+    removeFromCart(plateId: String): [LicensePlate]
   }
+ 
 `;
 
 const plates = [
@@ -383,6 +385,12 @@ const resolvers = {
                 cartContents.push(plate);
             return cartContents;
         },
+        removeFromCart:  (_, {plateId}) => {
+            let index = cartContents.findIndex(p => p._id == plateId);
+            if (index >= -1)
+                cartContents.splice(index, 1);
+             return cartContents;
+        }
     }
 };
 
